@@ -108,7 +108,7 @@ main {
     background-color: transparent;
 }
 
-.question p {
+.question span {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -116,12 +116,12 @@ main {
     color: var(--very-dark-desaturated-blue);
 }
 
-.question:hover p {
+.question:hover span {
     color: var(--soft-red);
 }
 
-.question:active p,
-.question:focus p {
+.question:active span,
+.question:focus span {
     color: var(--very-dark-grayish-blue);
     font-weight: bold;
     transition: font-weight 250ms;
@@ -191,6 +191,14 @@ main {
 .q5::after {
     content: "Chat and email support is available 24/7. Phone lines are open during normal business hours.";
 }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
 
 @media only screen and (max-width:900px) {
     .container {
