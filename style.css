@@ -50,8 +50,8 @@ main {
     position: relative;
     width: 500px;
     height: 100%;
-    background: url(./images/bg-pattern-desktop.svg) -41em -22em no-repeat;
-    background-size: 70em 75em;
+    background: url(./images/bg-pattern-desktop.svg) -34em -21em no-repeat;
+    background-size: 66em 71em;
 }
 
 .overflow-wrap {
@@ -72,8 +72,8 @@ main {
 .box-illustration {
     position: absolute;
     width: 40%;
-    top: 170px;
-    right: 320px;
+    top: 200px;
+    right: 400px;
 }
 
 
@@ -247,5 +247,6 @@ main {
         height: 200px;
         bottom: 610px;
         right:-135px;
+        background:none;
     }
 }
