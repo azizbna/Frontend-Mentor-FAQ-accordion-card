@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
 
 :root {
     --very-dark-desaturated-blue: hsl(238, 29%, 16%);
@@ -21,13 +21,13 @@ html {
 }
 
 body {
-    background: linear-gradient(180deg, rgba(175, 103, 233, 1) 0%, rgba(101, 101, 231, 1) 100%);
+    background: linear-gradient(180deg, rgba(175, 103, 233, 1) 0%, rgba(101, 101, 231, 1) 100%) no-repeat fixed;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
 }
 
 main {
-    min-height: 100vh;
+    height: inherit;
     width: inherit;
     display: flex;
     justify-content: center;
@@ -36,26 +36,29 @@ main {
 
 .container {
     background: white;
-    width: 900px;
+    width: 950px;
     height: 500px;
-    border-radius: 20px;
+    border-radius: 25px;
+    box-shadow: red 15px 10px 10px -15px;
     display: grid;
     grid-template-columns: 50% 50%;
+    box-shadow: 0 100px 100px -100px var(--very-dark-desaturated-blue);
+
 }
 
 .illustration {
     position: relative;
     width: 500px;
     height: 100%;
-    background: url(./images/bg-pattern-desktop.svg) -42em -18em no-repeat;
-    background-size: 66em 63em;
+    background: url(./images/bg-pattern-desktop.svg) -41em -22em no-repeat;
+    background-size: 70em 75em;
 }
 
 .overflow-wrap {
     overflow: hidden;
     width: inherit;
     height: inherit;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .woman-illustration {
@@ -86,7 +89,8 @@ main {
     margin-top: 15%;
     padding-inline: 10%;
 }
-.faq h1{
+
+.faq h1 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -94,7 +98,7 @@ main {
 
 .question {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     border: none;
     border-bottom: 1px solid var(--Light-grayish-blue);
     position: relative;
@@ -105,10 +109,11 @@ main {
 }
 
 .question p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
     color: var(--very-dark-desaturated-blue);
-    
 }
 
 .question:hover p {
@@ -134,14 +139,16 @@ main {
 .question::after {
     content: "";
     text-align: left;
-    font-size: 12px;
-    color:var(--Light-grayish-blue);
+    font-size: 13px;
+    line-height: 17px;
+    color: var(--Light-grayish-blue);
     height: 0px;
-    width: inherit;
+    width: 100%;
     display: block;
     transform: scaleY(0);
     transform-origin: top;
     margin-top: 10px;
+    margin-bottom: 5px;
     transition: height 250ms ease-out, transform 250ms ease;
 }
 
@@ -183,4 +190,62 @@ main {
 
 .q5::after {
     content: "Chat and email support is available 24/7. Phone lines are open during normal business hours.";
+}
+
+@media only screen and (max-width:900px) {
+    .container {
+        transform: scale(0.9);
+    }
+}
+
+@media only screen and (max-width:800px) {
+    main {
+        height: 1000px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        height: 600px;
+        width: 350px;
+        position: relative;
+        background: white url(./images/bg-pattern-desktop.svg) 3em -13em no-repeat;
+        background-size: 24em;
+    }
+
+    .faq h1 {
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .faq {
+        margin-inline: 0;
+        padding-left: 15px;
+        padding-right: 0;
+        width: inherit;
+        height: 420px;
+    }
+
+    .question {
+        width: 95%;
+    }
+
+    .question::after {
+        width: 90%;
+    }
+
+    .overflow-wrap {
+        overflow: visible;
+        height: 200px;
+        position: relative;
+    }
+
+    .illustration {
+        transform: scale(0.65);
+        position: absolute;
+        height: 200px;
+        bottom: 610px;
+        right:-135px;
+    }
 }
